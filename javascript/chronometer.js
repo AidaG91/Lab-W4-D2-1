@@ -5,9 +5,8 @@ class Chronometer {
   }
 
   start(callback) {
-    this.intervalId = setInterval(() => {
+    this.intervalId = setInterval(() => { 
       this.currentTime++;
-
       if (typeof callback === 'function') {
         callback();
       }
@@ -43,7 +42,7 @@ class Chronometer {
     const formattedMinutes = this.computeTwoDigitNumber(minutes);
     const formattedSeconds = this.computeTwoDigitNumber(seconds);
 
-    return `${minutesFormat}:${secondsFormat}`;
+    return `${formattedMinutes}:${formattedSeconds}`;
   }
 }
 
